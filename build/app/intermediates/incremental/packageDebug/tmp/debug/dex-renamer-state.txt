@@ -1,0 +1,4 @@
+#Sat Jul 04 15:17:01 CAT 2020
+base.0=C\:\\mobileProjects\\ui_project\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
