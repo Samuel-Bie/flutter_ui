@@ -192,7 +192,11 @@ class _MyHomePageState extends State<MyHomePage> {
               _buildCard('Samuel', 'Available', 1),
               _buildCard('Frio', 'Away', 2),
               _buildCard('Brian', 'Away', 1),
-              _buildCard('Nick', 'Available', 1),
+              _buildCard('Nick', 'Available', 2),
+              _buildCard('Samuel', 'Available', 1),
+              _buildCard('Frio', 'Away', 2),
+              _buildCard('Brian', 'Away', 1),
+              _buildCard('Nick', 'Available', 2),
             ],
           )
         ],
@@ -223,6 +227,20 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             ),
+            Container(
+              margin: EdgeInsets.only(left: 35.0),
+              height: 20.0,
+              width: 20.0,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(30.0),
+                color: status == 'Away' ? Colors.amber : Colors.green,
+                border: Border.all(
+                  color: Colors.white,
+                  style: BorderStyle.solid,
+                  width: 2.0,
+                ),
+              ),
+            )
           ]),
           SizedBox(height: 8.0),
           Text(
