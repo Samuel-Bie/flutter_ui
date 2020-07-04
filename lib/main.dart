@@ -209,63 +209,62 @@ class _MyHomePageState extends State<MyHomePage> {
       child: Column(
         children: <Widget>[
           SizedBox(height: 12.0),
-          Stack(
-            children: <Widget>[
-              Container(
-                height: 60.0,
-                width: 60.0,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(30.0),
-                  color: Colors.green,
-                  image: DecorationImage(
-                    image: NetworkImage(
-                        'https://s.gravatar.com/avatar/ef5e8e8765c5c00f2b8602f094d8b9db?s=400'),
+          Stack(children: <Widget>[
+            Container(
+              height: 60.0,
+              width: 60.0,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(30.0),
+                color: Colors.green,
+                image: DecorationImage(
+                  image: NetworkImage(
+                    'https://s.gravatar.com/avatar/ef5e8e8765c5c00f2b8602f094d8b9db?s=400',
                   ),
                 ),
               ),
-              SizedBox(height: 8.0),
-              Text(
-                name,
-                style: TextStyle(
-                  fontFamily: 'Quicksand',
-                  fontWeight: FontWeight.bold,
-                  fontSize: 15.0,
+            ),
+          ]),
+          SizedBox(height: 8.0),
+          Text(
+            name,
+            style: TextStyle(
+              fontFamily: 'Quicksand',
+              fontWeight: FontWeight.bold,
+              fontSize: 15.0,
+            ),
+          ),
+          SizedBox(height: 5.0),
+          Text(
+            status,
+            style: TextStyle(
+              fontFamily: 'Quicksand',
+              fontWeight: FontWeight.bold,
+              fontSize: 12.0,
+              color: Colors.grey,
+            ),
+          ),
+          SizedBox(height: 15.0),
+          Expanded(
+            child: Container(
+              width: 175.0,
+              decoration: BoxDecoration(
+                color: status == 'Away' ? Colors.grey : Colors.green,
+                borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(10.0),
+                    bottomRight: Radius.circular(10.0)),
+              ),
+              child: Center(
+                child: Text(
+                  'Request',
+                  style: TextStyle(
+                    fontFamily: 'Quicksand',
+                    fontWeight: FontWeight.bold,
+                    fontSize: 12,
+                    color: Colors.white,
+                  ),
                 ),
               ),
-              SizedBox(height: 5.0),
-              Text(
-                status,
-                style: TextStyle(
-                  fontFamily: 'Quicksand',
-                  fontWeight: FontWeight.bold,
-                  fontSize: 12.0,
-                  color: Colors.grey,
-                ),
-              ),
-              SizedBox(height: 15.0),
-              Expanded(
-                child: Container(
-                  width: 175.0,
-                  decoration: BoxDecoration(
-                    color: status == 'Away' ? Colors.grey : Colors.green,
-                    borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(10.0),
-                        bottomRight: Radius.circular(10.0)),
-                  ),
-                  child: Center(
-                    child: Text(
-                      'Request',
-                      style: TextStyle(
-                        fontFamily: 'Quicksand',
-                        fontWeight: FontWeight.bold,
-                        fontSize: 12,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                ),
-              )
-            ],
+            ),
           )
         ],
       ),
