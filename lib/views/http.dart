@@ -27,7 +27,7 @@ class _HttpRequestState extends State<HttpRequest> {
   List users;
 
   Future<String> makeRequest() async {
-    var url = "http://192.168.8.101/api/user";
+    var url = "http://192.168.8.100/api/user";
     var response = await http
         .get(Uri.encodeFull(url), headers: {"Accept": "application/json"});
 
@@ -61,7 +61,7 @@ class _HttpRequestState extends State<HttpRequest> {
             title: Text(this.users[i]['name']),
             subtitle: Text(this.users[i]['phone']),
             leading: new CircleAvatar(
-                backgroundImage: NetworkImage('http://192.168.8.101/mucassa/images/laravel-logo.png.jpg'),
+                backgroundImage: NetworkImage('http://192.168.8.100/mucassa/images/laravel-logo.png.jpg'),
                 ),
           );
         },
@@ -87,7 +87,7 @@ class SecondPage extends StatelessWidget {
               color: Colors.redAccent,
               image: new DecorationImage(
                 image: NetworkImage(
-                    "http://192.168.8.101/mucassa/images/laravel-logo.png.jpg"),
+                    "http://192.168.8.100/mucassa/images/laravel-logo.png.jpg"),
                 fit: BoxFit.cover,
               ),
               borderRadius: BorderRadius.all(Radius.circular(75)),
